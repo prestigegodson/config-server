@@ -1,0 +1,33 @@
+server:
+  port: 8888
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri:  git@github.com:prestigegodson/spring-config-test.git
+          ignore-local-ssh-settings: true
+#          host-key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQCw3YKfJo2ceiesudJhnCqzBrV8EDAq/XcChWleYnT+CXx2dTfvB6spdWtLcofAom1JJ0ExfIvTAdaybvLel/aN+/y5Nbyizi6dgRZpc76LHLzTUdNHKnFTZU02kV9CXmNp/yG5IBTbphWWMcs+PCHDKmMs5OFJgn2UrbepBsCjRQ==
+          clone-on-start: true
+          strict-host-key-checking: false
+#          host-key-algorithm: ssh-rsa
+          private-key:  |
+                          -----BEGIN RSA PRIVATE KEY-----
+                          MIICWwIBAAKBgQCw3YKfJo2ceiesudJhnCqzBrV8EDAq/XcChWleYnT+CXx2dTfv
+                          B6spdWtLcofAom1JJ0ExfIvTAdaybvLel/aN+/y5Nbyizi6dgRZpc76LHLzTUdNH
+                          KnFTZU02kV9CXmNp/yG5IBTbphWWMcs+PCHDKmMs5OFJgn2UrbepBsCjRQIDAQAB
+                          AoGAFINMcAr3p6tfSKAwr1N+fE8N43q5K3NER02T3/eJXCFbhx2nRBjemCtfK1v4
+                          NLZh+HcOD6BDU1DGRuGpV3nGhZXS2MmI7eHfBOdXUpuz4kBd2FaWkKktRGDP2QTN
+                          ATTZ1oSNW2ngY69SJQe1KKEajAuu/S+Sv4ujftIn85kVgW0CQQDZLpezZBHMjiT6
+                          S/Ev2SrRs4eQ5a9ZtL1SKcgWQbms5c6i+ryNT2s58kobTlxDW5zijPGYwc5dX2TF
+                          lIdm04DDAkEA0HouKO+J8LkQi3+Z8bNlmyhB8C8gIEptQJCX6zwMLx1fD13aJQyV
+                          6vKve1o3AR7kBlQY7M+5K4ykLl4DCtKLVwJAcXG2Ch2Wcow5YojypjTA+iLWCGkB
+                          rFENp3JtsrqIO3ka8+UXQpUehHk8HoFTDlg3XduTg2CQ5BMlN1O7WonWMwJAaRyh
+                          N2yG3QNCD0OXx6CO4yrqDAKGrSE5cms03ZrZ/ctOSX4lZbaxw9L2nTgAMaV0jKhM
+                          JOIa15VClko6OHOtYwJAeYtXBKhOj2yP4c1/GXCL438PW07caNEE8s3eEOMvRedB
+                          7/v0Coin2BTtk/mUUqoT6ZXr+tWQWoLaJVoMMvKePg==
+                          -----END RSA PRIVATE KEY-----
+  security:
+    user:
+      name: root
+      password: password
